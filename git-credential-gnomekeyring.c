@@ -152,7 +152,9 @@ main(int argc, const char **argv)
 	error("Usage: git credential-gnomekeyring <get|store|erase>");
 	return 1;
     }
-
+	
+	g_set_application_name("git-credential-gnomekeyring");
+	
     if (read_credential(&cred)) {
 	clear_credential(&cred);
 	return 1;
